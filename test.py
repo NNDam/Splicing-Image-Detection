@@ -1,15 +1,12 @@
 from skimage.feature import local_binary_pattern
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import confusion_matrix
 from sklearn.svm import SVC, LinearSVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils import shuffle
-from scipy import fftpack
 import numpy as np
 from progressbar import progressbar
 import glob
 import cv2
-import pywt
 
 def extract_chromatic_channel(bgr_img):
     # Extract 2 chromatic channes from BGR image
